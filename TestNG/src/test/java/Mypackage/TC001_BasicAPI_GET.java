@@ -33,7 +33,7 @@ public class TC001_BasicAPI_GET {
 		
 		//Print Status Line
 		String Statusline = httpresponse.getStatusLine();
-		System.out.println("The Staus line is " + Statusline);
+		System.out.println("The Status line is " + Statusline);
 		Assert.assertEquals(Statusline, "HTTP/1.1 200 OK");
 
 	}
