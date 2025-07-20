@@ -22,6 +22,14 @@ public class TC001_BasicAPI_GET {
 		
 		//Response Object
 		Response httpresponse=httprequest.request(Method.GET,"/Chennai");
+
+		//Print Status Code
+int StatusCode= httpresponse.getStatusCode();
+System.out.println("The Staus code is " + StatusCode);
+if (StatusCode == 10) {
+    throw new RuntimeException("Status code is 10, which is not allowed.");
+}
+Assert.assertEquals(StatusCode, 200);
 		
 		//Print responsebody
 		String responseBody = httpresponse.getBody().asString();
